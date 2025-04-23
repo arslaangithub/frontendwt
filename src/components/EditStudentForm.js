@@ -10,7 +10,7 @@ function EditStudentForm() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/students/${id}`).then((res) => {
+    axios.get(`https://backendwt-1.onrender.com/students/${id}`).then((res) => {
       setFormData(res.data);
     });
   }, [id]);
@@ -39,7 +39,7 @@ function EditStudentForm() {
       setErrors(validationErrors);
     } else {
       try {
-        await axios.put(`http://localhost:5000/students/${id}`, formData);
+        await axios.put(`https://backendwt-1.onrender.com/students/${id}`, formData);
         alert('Student updated successfully!');
         navigate('/');
       } catch (error) {
