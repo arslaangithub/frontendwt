@@ -41,7 +41,7 @@ function AddStudentForm() {
       setErrors(validationErrors);
     } else {
       try {
-        await axios.post('http://localhost:5000/students', formData);
+        await axios.post('https://backendwt-1.onrender.com', formData);
         alert('Student added successfully!');
         navigate('/');
       } catch (error) {
